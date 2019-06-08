@@ -1,0 +1,51 @@
+﻿<!-- 
+    1. Сделать собственные примеры методов применяемых для массивов.
+
+    2. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
+
+    3. Создать многомерный массив, размер массива получить от пользователя. Каждый нечётный подмассив заполнить значением 'odd', а чётный - 'even'. Размер каждого вложенного массива - 3.
+
+    4. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные из двух массивов и вывести их в одну строку. 
+    
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+    var myArray = [[" Paul1", 31], [" Paul2", 32], [" Paul3", 33], [" Paul4", 34], [" Paul5", 35]]
+	var added = myArray.unshift([" Paul0", 32]);
+	var added = myArray.push([" Paul6", 36]);
+	var added = myArray.splice(3, 1);
+	console.log(myArray);
+
+    var myArray1 = ["Element1", "Element2", "Element3", "Element4", "Element5"];
+    var input = "ElementRandom";
+    var numb = +prompt();
+    var added = myArray1.splice(numb, 0, input);
+    console.log(myArray1);
+
+    var size = +prompt();
+    var myArray2 = [];
+    for (i = 0; i < size; i++){
+        if(i%2 == 1){
+            myArray2[i] = ["odd", "odd", "odd"];
+        } else{
+            myArray2[i] = ["even", "even", "even"];
+        }
+    }
+    console.log(myArray2);
+
+    var cities = ["City1", "City2", "City3", "City4", "City5"];
+    var citizens = [100, 200, 300, 400, 500];
+    var myArray3 = [];
+    for (i = 0; i < cities.length; i++){
+        myArray3[i] = [cities[i], citizens[i]];
+    }
+    console.log(myArray3);
+    </script>
+      
+</head>
+<body>
+</body>
+</html>

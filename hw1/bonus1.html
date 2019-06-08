@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var street = "Smolenska";
+        var homeNumber = "31-33";
+        var city = "Kyiv";
+        document.write('<table border="1"><tr><td>' + "city" + '</td><td>' + city + '</td></tr><tr><td>' + "street" + '</td><td>' + street + '</td></tr><tr><td>' + "number" + '</td><td>' + homeNumber + '</td></tr></table>');
+        var name = prompt("name=");
+        var surName = prompt("surname=");
+        var hobby1 = prompt("Your hobby 1:");
+        var hobby2 = prompt("Your hobby 2:");
+        var hobby3 = prompt("Your hobby 3:");
+        var fullName = name + ' ' + surName;
+        var randomNumber = prompt("Enter your random number");
+        var number = 13 - (-randomNumber);
+        document.write('<h1>' + fullName + '</h1><ul><li>' + hobby1 + '</li><li>' + hobby2 + '</li><li>' + hobby3 + '</li></ul><br><span>' + number + '</span>');
+        
+    </script>
+    
+</body>
+</html>

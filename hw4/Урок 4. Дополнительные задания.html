@@ -1,0 +1,108 @@
+﻿<!-- 
+    1. Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, sign — знак арифметической операции.
+       Функция должна расчитывать результат операции, исходя из переданного ей знака. 
+       Функция должна проверять корректность введенных чисел и знака операции.
+       Все аргументы для функции принять от пользователя.
+
+    2. Создать функцию, возводящую число в степень, число и сама степень вводится пользователем
+    
+    3.  Создать игру "Камень-Ножницы-Бумага".
+        Выбор компьютера определяется строкой:  
+        "var computerChoice = Math.random();
+        alert(computerChoice);".
+        Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить принцип выбора решения компьютера.
+
+    4. Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте цикл.
+
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+    function calc(a, b, c){
+        switch (c){
+            case "+":
+                return (a + b);
+            case "-":
+                return (a - b);
+            case "*":
+                return (a * b);
+            case "/":
+                return (a / b);
+            default:
+                return "Error";    
+        }
+    }
+    var firstNumb = +prompt();
+    if(isNaN(firstNumb) == true){  
+        alert("Не цифра");
+    }
+    var secondNumb = +prompt();
+    if(isNaN(secondNumb) == true){  
+        alert("Не цифра");
+    }
+    var sygn = prompt();
+    if(sygn != "+" && sygn != "-" && sygn != "*" && sygn != "/"){
+        alert("Неправильный знак");
+    }
+    if(isNaN(firstNumb) == false && isNaN(secondNumb) == false && (sygn == "+" || sygn == "-" || sygn == "*" || sygn == "/")){
+        var res = calc(firstNumb, secondNumb, sygn);
+        document.write(res);
+    }
+    function secondTask(a, b){
+        var c = 1;
+        for (var i = 0; i < b; i++){
+            c *= a;
+        }
+        return c;
+    }
+    var secondTask1 = secondTask(2,3);
+    document.write('</br>');
+    document.write(secondTask1);
+
+    function thirdTask(a){
+        var comp = Math.random();
+        comp *= 3;
+        if(comp < 1){
+            comp = "К";
+        } else if(comp < 2){
+            comp = "Н";
+        } else{
+            comp = "Б";
+        }
+        if(a == comp){
+            alert(a + " = " + comp + " = Ничья");
+        } else if ((a == "К" && comp == "Н") || (a == "Н" && comp == "Б") || (a == "Б" && comp == "К")){
+            alert(a + " > " + comp + " Победа")
+        } else {
+            alert(a + " < " + comp + " Поражение")
+        }
+    }
+    var game = prompt("Камень (К), ножницы (Н) или бумага(Б)?");
+    if (game == "К" || game == "Н" || game == "Б"){
+        thirdTask(game);
+    }
+
+    function fourthTask(n){
+        var fibb = [];
+        fibb[0] = 0;
+        fibb[1] = 1;
+        for(i = 2; i < n; i++){
+            fibb [i] = fibb[i-2] + fibb[i-1];
+        }
+        return fibb[n-1];
+    }
+    var fibb1 = fourthTask(10);
+    document.write('</br>');
+    document.write(fibb1);
+
+    //var computerChoice = Math.random();
+    //alert(computerChoice);
+    
+    </script>
+</head>
+<body>
+</body>
+</html>
