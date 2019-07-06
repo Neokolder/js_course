@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i" rel="stylesheet"> 
     <script type="text/javascript" src="js/jscript.js"></script>
-    <script type="text/javascript" src="js/jsscript.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
     <div class="wrapper">
         <div class="top">
             <a class="call" href="#">&#9742;&emsp; Call +001 555 801</a>
@@ -56,7 +57,7 @@
                     <ul class="menu-r">
                         <li><a href="#">ENGLISH&#8195;</a>
                         <ul class="submenu-r">
-                            <li><a href="#">SPANISH</a></li>
+                            <li><a id="logoId" href="#">SPANISH</a></li> 
                             <li><a href="#">FRENCH</a></li>
                             <li><a href="#">ITALIAN</a></li>
                         </ul>
@@ -82,8 +83,8 @@
             </div>	
         </div>
         <div id="container">
-            <button id="slideright" class="rightNavigator" onclick="slideshow.move(1)"><i class="arrow right"></i><i class="arrow right"></i></button>
-            <button id="slideleft" class="leftNavigator" onclick="slideshow.move(-1)"><i class="arrow left"></i><i class="arrow left"></i></button>
+            <button id="slideright" class="rightNavigator" onclick="slideshow.move(1)"><div class="rightArrows"><i class="arrow right"></i><i  id="arrowRight" class="arrow right"></i></div></button>
+            <button id="slideleft" class="leftNavigator" onclick="slideshow.move(-1)"><div class="leftArrows"><i id="arrowLeft" class="arrow left"></i><i class="arrow left"></i></div></button>
             <div id="slider">
                 <ul>
                     <li><img src="img/4.jpg" alt="Первое фото" /></li>
@@ -189,6 +190,13 @@
                 </div>
             </div>
         </div>
+        <a id="toTop">UP</a>
+        <div id="modal">
+            <div id="closeBtn">
+                X
+            </div>
+            <span>Ahmm... No Spanish, i'm sorry :)</span>
+        </div>
     </div>
     <script>
         var index = 1;
@@ -229,6 +237,31 @@
             left:'slideleft',
             right:'slideright'
         });
+
+        var toTop = document.getElementById('toTop');
+
+		window.onscroll = function(){
+			if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				toTop.style.display = "block";
+			} else {
+				toTop.style.display = "none";
+			}
+		}
+
+		toTop.addEventListener('click', function(){
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		});
+
+        //modal
+        $('#logoId').on('click', function(){
+            $('#modal').show(2000);      
+        })
+        $('#closeBtn').on('click', function(e) {
+            $('#modal').hide();
+            $('body').removeClass('hovered');
+            console.log(e);
+        })
     </script>
 </body>
 </html>

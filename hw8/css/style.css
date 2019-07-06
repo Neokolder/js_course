@@ -540,4 +540,42 @@ img {
 {
 	background: #fff;
 }
+#toTop{
+  display: none;
+  font-size: 20px;
+  color: green;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#modal{
+  display: none;
+  background: white;
+  width: 200px;
+  height: 200px;
+  font-size: 20px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#closeBtn{
+  cursor: pointer;
+}
+.rightArrows{
+  position: relative;
+}
+#arrowRight{
+  position: absolute;
+  right: 10px;
+}
+.leftArrows{
+  position: relative;
+}
+#arrowLeft{
+  position: absolute;
+  left: 10px;
+}
 /*# sourceMappingURL=style.css.map */
