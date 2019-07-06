@@ -1,0 +1,167 @@
+﻿<!-- 
+    1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий,
+       в каком квадранте в декартовой системе координат находится данная точка.
+       Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+    
+    2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
+       Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+       В зависимости от принятого знака операции, вызвать соответствующий метод.
+
+    3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+       содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+    
+    4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 3000;
+           • "manager" — 1500;
+           • "programmer" — 2000;
+           • для остальных значений — 1000.
+       После выполнения функции — вывести информацию о сотрудниках.
+           
+    5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках.
+
+     -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+   <script>
+
+      //task 1
+
+      var point = {
+         x: -10,
+         y: 20,
+      }
+      function GetQuadrant (point){
+         if (point.x >= 0 && point.y > 0){
+            console.log("Первый квадрант");
+         } else if (point.x < 0 && point.y >= 0){
+            console.log("Второй квадрант");
+         } else if (point.x < 0 && point.y < 0){
+            console.log("Третий квадрант");
+         } else if (point.x >= 0 && point.y < 0){
+            console.log("Четвертый квадрант");
+         }
+      }
+      GetQuadrant(point);
+
+      //task 2
+
+      var calculator = {
+         numb1: +prompt("First number"),
+         numb2: +prompt("Second number"),
+         sygn: prompt("Your sygn"),
+         act1: function (){
+            res = calculator.numb1 + calculator.numb2;
+            console.log(res);
+         },
+         act2: function (){
+            res = calculator.numb1 - calculator.numb2;
+            console.log(res);
+         },
+         act3: function (){
+            res = calculator.numb1 * calculator.numb2;
+            console.log(res);
+         },
+         act4: function (){
+            res = calculator.numb1 / calculator.numb2;
+            console.log(res);
+         }
+      }
+      switch (calculator.sygn){
+         case "+":
+            calculator.act1();
+            break;
+         case "-":
+            calculator.act2();
+            break;
+         case "*":
+            calculator.act3();
+            break;
+         case "/":
+            calculator.act4();    
+      }
+
+      //task 3
+
+      var workers = [];
+      var workerNumb = +prompt("Choose amount of workers");
+      for (var i = 0; i < workerNumb; i++){
+         workers[i] = {
+            name: prompt("Name of worker"),
+            sName: prompt("Second name of worker"),
+            age: prompt("Age of worker"),
+            occupation: prompt("Choose occupation: occup0, occup1, occup2, occup3"),
+            show: function(){
+               console.log("Name: " + this.name + " Surname: " + this.sName + " age: " + this.age + " occupation: " + this.occupation)
+            }
+         }
+         workers[i].show();
+      }
+
+      //task 4
+
+      function salaryAdder(worker){
+         if (worker.occupation == "occup0"){
+            worker.salary = "5000";
+         } else if (worker.occupation == "occup1"){
+            worker.salary = "4000";
+         } else if (worker.occupation == "occup2"){
+            worker.salary = "3000";
+         } else if (worker.occupation == "occup3"){
+            worker.salary = "2000";
+         } else {
+            worker.salary = "1000";
+         }
+      }
+      for (var i = 0; i < 5; i++){
+         salaryAdder(workers[i]);
+         workers[i].show = function(){
+            console.log("Name: " + workers[i].name + " Surname: " + workers[i].sName + " age: " + worker[i].age + " occupation: " + workers[i].occupation + " salary: " + workers[i].salary);
+         }
+         workers[i].show();
+      }
+
+      var ansortedArray = [];
+      ansortedArray[0] = workers[2];
+      ansortedArray[1] = workers[0];
+      ansortedArray[2] = workers[4];
+      ansortedArray[3] = workers[1];
+      ansortedArray[4] = workers[3];
+
+      // task 5
+
+      console.log("Before");
+      for (var i = 0; i < 5; i++){
+         ansortedArray[i].show = function(){
+            console.log("Name: " + ansortedArray[i].name + " Surname: " + ansortedArray[i].sName + " age: " + ansortedArray[i].age + " occupation: " + ansortedArray[i].occupation + " salary: " + ansortedArray[i].salary);
+         }
+         ansortedArray[i].show();
+      }
+      ansortedArray[4].name = "WORKER1";
+      var word = prompt ("choose characteristic (name, sName, age, occupation or salary)");
+      ansortedArray.sort(function(a, b){
+         var nameA = a[word].toLowerCase();
+         var nameB = b[word].toLowerCase();
+         if (nameA < nameB){
+            return -1;
+         } else if (nameA > nameB){
+            return 1;
+         } else {
+            return 0;
+         }
+      })
+      console.log("After");
+      for (var i = 0; i < 5; i++){
+         ansortedArray[i].show();
+      }
+   </script>
+</head>
+<body>
+</body>
+</html>

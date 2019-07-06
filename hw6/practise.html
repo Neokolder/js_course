@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 6 Practise</title>
+</head>
+<body>
+    <script>
+      // the global variable
+      var watchList = [
+                {  
+                "Title": "Inception",
+                "Year": "2010",
+                "Rated": "PG-13",
+                "Released": "16 Jul 2010",
+                "Runtime": "148 min",
+                "Genre": "Action, Adventure, Crime",
+                "Director": "Christopher Nolan",
+                "Writer": "Christopher Nolan",
+                "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
+                "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+                "Language": "English, Japanese, French",
+                "Country": "USA, UK",
+                "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+                "Metascore": "74",
+                "imdbRating": "8.8",
+                "imdbVotes": "1,446,708",
+                "imdbID": "tt1375666",
+                "Type": "movie",
+                "Response": "True"
+            },
+            {  
+                "Title": "Interstellar",
+                "Year": "2014",
+                "Rated": "PG-13",
+                "Released": "07 Nov 2014",
+                "Runtime": "169 min",
+                "Genre": "Adventure, Drama, Sci-Fi",
+                "Director": "Christopher Nolan",
+                "Writer": "Jonathan Nolan, Christopher Nolan",
+                "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+                "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+                "Language": "English",
+                "Country": "USA, UK",
+                "Awards": "Won 1 Oscar. Another 39 wins & 132 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+                "Metascore": "74",
+                "imdbRating": "8.6",
+                "imdbVotes": "910,366",
+                "imdbID": "tt0816692",
+                "Type": "movie",
+                "Response": "True"
+            },
+            {
+                "Title": "The Dark Knight",
+                "Year": "2008",
+                "Rated": "PG-13",
+                "Released": "18 Jul 2008",
+                "Runtime": "152 min",
+                "Genre": "Action, Adventure, Crime",
+                "Director": "Christopher Nolan",
+                "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+                "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+                "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+                "Language": "English, Mandarin",
+                "Country": "USA, UK",
+                "Awards": "Won 2 Oscars. Another 146 wins & 142 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+                "Metascore": "82",
+                "imdbRating": "9.0",
+                "imdbVotes": "1,652,832",
+                "imdbID": "tt0468569",
+                "Type": "movie",
+                "Response": "True"
+            },
+            {  
+                "Title": "Batman Begins",
+                "Year": "2005",
+                "Rated": "PG-13",
+                "Released": "15 Jun 2005",
+                "Runtime": "140 min",
+                "Genre": "Action, Adventure",
+                "Director": "Christopher Nolan",
+                "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+                "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+                "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+                "Language": "English, Urdu, Mandarin",
+                "Country": "USA, UK",
+                "Awards": "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+                "Metascore": "70",
+                "imdbRating": "8.3",
+                "imdbVotes": "972,584",
+                "imdbID": "tt0372784",
+                "Type": "movie",
+                "Response": "True"
+            },
+            {
+                "Title": "Avatar",
+                "Year": "2009",
+                "Rated": "PG-13",
+                "Released": "18 Dec 2009",
+                "Runtime": "162 min",
+                "Genre": "Action, Adventure, Fantasy",
+                "Director": "James Cameron",
+                "Writer": "James Cameron",
+                "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+                "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+                "Language": "English, Spanish",
+                "Country": "USA, UK",
+                "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+                "Metascore": "83",
+                "imdbRating": "7.9",
+                "imdbVotes": "876,575",
+                "imdbID": "tt0499549",
+                "Type": "movie",
+                "Response": "True"
+            }
+        ];
+
+        var rating = [];
+        for(var i=0; i < watchList.length; i++){
+            rating.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});
+        }
+
+        var rating = watchList.map(function(prop){
+            return { title: prop["Title"], rating: prop["imdbRating"]}
+        });
+
+        console.log(rating); 
+    </script>
+    <!-- 
+        1. Объект user содержит три свойства. Свойство data содержит пять свойств, один из которых содержит массив friends. Завершите запись функции addFriend, которая принимает объект user и имя друга(friend), и добавляет имя друга(friend) в массив friends. Функция должна возвращать массив friends.
+
+            let user = {
+            name: 'Kenneth',
+            age: 28,
+            data: {
+                username: 'kennethCodesAllDay',
+                joinDate: 'March 26, 2016',
+                organization: 'freeCodeCamp',
+                friends: [
+                'Sam',
+                'Kira',
+                'Tomo'
+                ],
+                location: {
+                city: 'San Francisco',
+                state: 'CA',
+                country: 'USA'
+                }
+            }
+            };
+
+            function addFriend(userObj, friend) {}
+
+            console.log(addFriend(user, 'Pete'));
+
+        2. Завершите написание функции getArrayOfUsers, чтобы она возвращала массив, содержащий все свойства объекта, который он получает в качестве аргумента.
+
+        let users = {
+            Alan: {
+                age: 27,
+                online: false
+            },
+            Jeff: {
+                age: 32,
+                online: true
+            },
+            Sarah: {
+                age: 48,
+                online: false
+            },
+            Ryan: {
+                age: 19,
+                online: true
+            }
+        };
+
+        function getArrayOfUsers(obj) {}
+
+        console.log(getArrayOfUsers(users));
+
+        3. Допишите функцию countOnline; используйте оператор for ... in в этой функции для циклического обхода пользователей в объекте users и возврата количества пользователей, для которых для свойства онлайн установлено значение true.
+
+        let users = {
+            Alan: {
+                age: 27,
+                online: false
+            },
+            Jeff: {
+                age: 32,
+                online: true
+            },
+            Sarah: {
+                age: 48,
+                online: false
+            },
+            Ryan: {
+                age: 19,
+                online: true
+            }
+        };
+
+        function countOnline(obj) {}
+
+        console.log(countOnline(users));
+
+        4. Используйте метод some внутри функции checkPositive, чтобы проверить, является ли какой-либо элемент в arr положительным. Функция должна возвращать логическое значение.
+
+        function checkPositive(arr) {}
+
+        checkPositive([1, 2, 3, -4, 5]);
+
+        5. Используйте метод every внутри функции checkPositive, чтобы проверить, является ли каждый элемент в arr положительным. Функция должна возвращать логическое значение.
+
+        function checkPositive(arr) {}
+
+        checkPositive([1, 2, 3, -4, 5]);
+
+        ##########################################################
+
+        // the global variable
+        var watchList = [
+                {  
+                "Title": "Inception",
+                "Year": "2010",
+                "Rated": "PG-13",
+                "Released": "16 Jul 2010",
+                "Runtime": "148 min",
+                "Genre": "Action, Adventure, Crime",
+                "Director": "Christopher Nolan",
+                "Writer": "Christopher Nolan",
+                "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
+                "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+                "Language": "English, Japanese, French",
+                "Country": "USA, UK",
+                "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
+                "Metascore": "74",
+                "imdbRating": "8.8",
+                "imdbVotes": "1,446,708",
+                "imdbID": "tt1375666",
+                "Type": "movie",
+                "Response": "True"
+            },
+            {  
+                "Title": "Interstellar",
+                "Year": "2014",
+                "Rated": "PG-13",
+                "Released": "07 Nov 2014",
+                "Runtime": "169 min",
+                "Genre": "Adventure, Drama, Sci-Fi",
+                "Director": "Christopher Nolan",
+                "Writer": "Jonathan Nolan, Christopher Nolan",
+                "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+                "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+                "Language": "English",
+                "Country": "USA, UK",
+                "Awards": "Won 1 Oscar. Another 39 wins & 132 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+                "Metascore": "74",
+                "imdbRating": "8.6",
+                "imdbVotes": "910,366",
+                "imdbID": "tt0816692",
+                "Type": "movie",
+                "Response": "True"
+            },
+            {
+                "Title": "The Dark Knight",
+                "Year": "2008",
+                "Rated": "PG-13",
+                "Released": "18 Jul 2008",
+                "Runtime": "152 min",
+                "Genre": "Action, Adventure, Crime",
+                "Director": "Christopher Nolan",
+                "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+                "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+                "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+                "Language": "English, Mandarin",
+                "Country": "USA, UK",
+                "Awards": "Won 2 Oscars. Another 146 wins & 142 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+                "Metascore": "82",
+                "imdbRating": "9.0",
+                "imdbVotes": "1,652,832",
+                "imdbID": "tt0468569",
+                "Type": "movie",
+                "Response": "True"
+            },
+            {  
+                "Title": "Batman Begins",
+                "Year": "2005",
+                "Rated": "PG-13",
+                "Released": "15 Jun 2005",
+                "Runtime": "140 min",
+                "Genre": "Action, Adventure",
+                "Director": "Christopher Nolan",
+                "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+                "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+                "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+                "Language": "English, Urdu, Mandarin",
+                "Country": "USA, UK",
+                "Awards": "Nominated for 1 Oscar. Another 15 wins & 66 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg",
+                "Metascore": "70",
+                "imdbRating": "8.3",
+                "imdbVotes": "972,584",
+                "imdbID": "tt0372784",
+                "Type": "movie",
+                "Response": "True"
+            },
+            {
+                "Title": "Avatar",
+                "Year": "2009",
+                "Rated": "PG-13",
+                "Released": "18 Dec 2009",
+                "Runtime": "162 min",
+                "Genre": "Action, Adventure, Fantasy",
+                "Director": "James Cameron",
+                "Writer": "James Cameron",
+                "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+                "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+                "Language": "English, Spanish",
+                "Country": "USA, UK",
+                "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.",
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+                "Metascore": "83",
+                "imdbRating": "7.9",
+                "imdbVotes": "876,575",
+                "imdbID": "tt0499549",
+                "Type": "movie",
+                "Response": "True"
+            }
+        ];
+
+        6. Массив watchList содержит объекты с информацией о нескольких фильмах. Используйте map, чтобы извлечь заголовок и рейтинг из списка наблюдения и сохранить новый массив в переменной рейтинга. Код в редакторе в настоящее время использует цикл for, замените функциональность цикла на map.
+
+        var rating = [];
+        for(var i=0; i < watchList.length; i++){
+            rating.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});
+        }
+
+        var rating = watchList.map(function(prop){
+            return { title: prop["Title"], rating: prop["imdbRating"]}
+        });
+
+        console.log(rating); 
+
+        7. Массив watchList содержит объекты с информацией о нескольких фильмах. Используйте filter и map для возврата нового массива объектов только с title и rating, но где imdbRating больше или равен 8.0.
+
+        var filteredList;
+
+        console.log(filteredList); 
+
+        8. Массив watchList содержит объекты с информацией о нескольких фильмах. Используйте reduce, чтобы найти средний рейтинг IMDB фильмов, снятых режиссером Кристофером Ноланом. Вспомните из предыдущих заданий filter и map. Вам может потребоваться создать другие переменные, но сохраните окончательное среднее значение в переменную AverageRating. Обратите внимание, что значения рейтинга сохраняются в виде строк в объекте и должны быть преобразованы в числа, прежде чем они будут использованы в любых математических операциях.
+
+        var averageRating = watchList
+            .map(a => { return {director: a["Director"], rate: a["imdbRating"]}})
+            .filter(a => {return (a.director === "Christopher Nolan")})
+            .reduce( (a, b, arr) => { return (a + b) / arr.length});
+
+        
+
+        Optional: https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1 - до JS Dates
+     -->
+</body>
+</html>
