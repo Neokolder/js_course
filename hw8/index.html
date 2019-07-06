@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i" rel="stylesheet"> 
+    <script type="text/javascript" src="js/jscript.js"></script>
+    <script type="text/javascript" src="js/jsscript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <a class="call" href="#">&#9742;&emsp; Call +001 555 801</a>
+            <ul class="top-menu">
+                <li ><a href="#">&emsp;WELCOME MSG! &emsp;  |</a>
+                </li>
+                <li ><a href="#">&emsp;MY ACCOUNT&emsp;  |</a>
+                </li>
+                <li ><a href="#">&emsp;MY WHISHTLIST&emsp;  |</a>
+                </li>
+                <li ><a href="#">&emsp;LOGIN</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header">
+            <ul class="left-menu">
+                <li ><a href="#">Home</a>
+                </li>
+                <li ><a href="#">Gallery</a>
+                </li>
+                <li ><a href="#">Categories</a>
+                </li>
+                <li ><a href="#">Pages</a>
+                </li>
+            </ul>
+            <a class="logo" href="#">Shophia</a>
+            <div class="r-box">
+                <div class="icon">
+                        <a href="#"><i class="fab fa-facebook-f"></i>
+                    </a>
+                        <a href="#"><i class="fab fa-twitter"></i>
+                    </a>
+                        <a href="#"><i class="fab fa-instagram"></i>
+                    </a>
+                        <a href="#"><i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+                <div>
+                    <ul class="menu-r">
+                        <li><a href="#">ENGLISH&#8195;</a>
+                        <ul class="submenu-r">
+                            <li><a href="#">SPANISH</a></li>
+                            <li><a href="#">FRENCH</a></li>
+                            <li><a href="#">ITALIAN</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <img class="slide" src="img/4.jpg" alt="1">
+                <img class="slide" src="img/5.jpg" alt="2">
+                <img class="slide" src="img/6.jpg" alt="3">		
+            </div>
+            <div class="navigation">
+                <button class="rightNavigator" onclick="navigateSlides(1)"><i class="arrow right"></i><i class="arrow right"></i></button>
+                <button class="leftNavigator" onclick="navigateSlides(-1)"><i class="arrow left"></i><i class="arrow left"></i></button>
+            </div>
+            <div class="dots">
+                <button class="dot" onclick="showCurrentSlide(1)"></button>
+                <button class="dot" onclick="showCurrentSlide(2)"></button>
+                <button class="dot" onclick="showCurrentSlide(3)"></button>
+            </div>	
+        </div>
+        <div id="container">
+            <button id="slideright" class="rightNavigator" onclick="slideshow.move(1)"><i class="arrow right"></i><i class="arrow right"></i></button>
+            <button id="slideleft" class="leftNavigator" onclick="slideshow.move(-1)"><i class="arrow left"></i><i class="arrow left"></i></button>
+            <div id="slider">
+                <ul>
+                    <li><img src="img/4.jpg" alt="Первое фото" /></li>
+                    <li><img src="img/5.jpg" alt="Второе фото" /></li>
+                    <li><img src="img/6.jpg" alt="Третье фото" /></li>
+                </ul>
+            </div>
+            <ul id="pagination" class="pagination">
+                <li onclick="slideshow.pos(0)"></li>
+                <li onclick="slideshow.pos(1)"></li>
+                <li onclick="slideshow.pos(2)"></li>
+            </ul>
+            <div class="dots">
+                <button onclick="slideshow.pos(0)" class="dot" onclick="showCurrentSlide(1)"></button>
+                <button onclick="slideshow.pos(1)" class="dot" onclick="showCurrentSlide(2)"></button>
+                <button onclick="slideshow.pos(2)" class="dot" onclick="showCurrentSlide(3)"></button>
+            </div>	
+        </div>
+        <div class="line">
+            <hr>
+            <p>
+                <img src="img/rombic.png" width="20" height="20" alt=""/>
+                Summer Collection
+                <img src="img/rombic.png" width="20" height="20" alt=""/>
+            </p>
+            <hr>
+        </div>
+        <div class="container">
+            <div><img src="img/41.jpg" width="300" height="345" alt=""/></div>
+            <div><img src="img/42.jpg" width="300" height="345" alt=""/></div>
+            <div><img src="img/43.jpg" width="300" height="345" alt=""/></div>
+            <div><img src="img/45.jpg" width="300" height="345" alt=""/></div>
+            <div><img src="img/44.jpg" width="300" height="345" alt=""/></div>
+            <div><img src="img/46.jpg" width="300" height="345" alt=""/></div>
+            <div><img src="img/47.jpg" width="300" height="345" alt=""/></div>
+            <div><img src="img/48.jpg" width="300" height="345" alt=""/></div>
+        </div>
+        <div class="footer">
+            <div class="cols">
+                <div>
+                    <p><a href="#"><span>SHOPS</span></a></p>
+                    <p><a href="#">New In</a></p>
+                    <p><a href="#">Women</a></p>
+                    <p><a href="#">Men</a></p>
+                    <p><a href="#">Shoes</a></p>
+                    <p><a href="#">Bags & Accessories</a></p>
+                    <p><a href="#">Top Brands</a></p>
+                    <p><a href="#">Sale & Special Offers</a></p>
+                    <p><a href="#">Lookbook</a></p>
+                </div>
+                <div>
+                    <p><a href="#"><span>INFORMATION</span></a></p>
+                    <p><a href="#">About us</a></p>
+                    <p><a href="#">Customer Service</a></p>
+                    <p><a href="#">New Collection</a></p>
+                    <p><a href="#">Best Sellers</a></p>
+                    <p><a href="#">Manufacturers</a></p>
+                    <p><a href="#">Privacy policy</a></p>
+                    <p><a href="#">Terms & condition</a></p>
+                    <p><a href="#">Blog</a></p>
+                </div>
+                <div>
+                    <p><a href="#"><span>CUSTOMER SERVICE</span></a></p>
+                    <p><a href="#">Search Terms</a></p>
+                    <p><a href="#">Advanced Search</a></p>
+                    <p><a href="#">Orders and Returns</a></p>
+                    <p><a href="#">Contact Us</a></p>
+                    <p><a href="#">RSS</a></p>
+                    <p><a href="#">Help & FAQs</a></p>
+                    <p><a href="#">Consultant</a></p>
+                    <p><a href="#">Store Locations</a></p>
+                </div>
+                <div>
+                    <p><span>STAY CONNECTED</span></p>
+                    <div class="icon-b">
+                            <a href="#"><i class="fab fa-facebook-f"></i>
+                        </a>
+                            <a href="#"><i class="fab fa-twitter"></i>
+                        </a>
+                            <a href="#"><i class="fab fa-instagram"></i>
+                        </a>
+                            <a href="#"><i class="fab fa-pinterest"></i>
+                        </a>
+                        <a href="#"><i class="fas fa-rss"></i>
+                        </a>
+                        </div>
+                    <p><span>SUBSCRIBE in OUR NEWS LETTER</span></p>
+                    <form >
+                            <input  type="Email" name="Email" value="Enter Your Email Address" />
+                        <button class="knopka" type="submit">SUBSCRIBE</button> 
+                    </form>
+                </div>
+            </div>
+            <div class="marks">
+                <p>© 2015  Shopia  Fashion Store Shopify. </p>
+                <p>All Rights Reserved. Ecommerce Software by Shopify.</p>
+                <p>Designed by  MoccaLabs.com</p>
+                <div class="logos">
+                    <a href="#"><img src="img/visa.png" alt="Visa"/></a> 
+                    <a href="#"><img src="img/mastercard.png" alt="Mastercard"/></a> 
+                    <a href="#"><img src="img/express.png" alt="American Express"/></a> 
+                    <a href="#"><img src="img/discover.png" alt="Discover"/> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var index = 1;
+        showSlide(index);		
+
+        function navigateSlides(n) {
+            showSlide(index += n);		
+        }
+
+        function showCurrentSlide(n) {
+            showSlide(index = n);
+        }
+
+        function showSlide(n) {		
+            var slides = document.getElementsByClassName('slide');	
+            if (n > slides.length) {
+                index = 1;
+            }
+            if (n < 1) {
+                index = slides.length;
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[index - 1].style.display = "block";
+        }
+
+        var slideshow=new TINY.slider.slide('slideshow',{
+            id:'slider',
+            auto:4,
+            resume:false,
+            vertical:false,
+            navid:'pagination',
+            activeclass:'current',
+            position:0,
+            rewind:false,
+            elastic:true,
+            left:'slideleft',
+            right:'slideright'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+@media (max-width: 1080px) {
+    .wrapper {
+    width: 960px;
+    }
+    .container{
+    grid-template-columns: auto auto auto;
+    }
+    .header{
+        width: 100%;
+        flex-flow: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    #container{
+        height: 437px;
+        width: 100%;
+    }
+    #container img{
+        height: 437px;
+        width: 100%;
+    }
+    #slider{
+        height: 437px;
+        width: 100%;
+    }
+    #slider li{
+        height: 437px;
+        width: 100%;
+    }
+}
+@media (max-width: 960px) {
+    .wrapper {
+    width: 760px;
+    }
+    .container{
+        grid-template-columns: auto auto;
+    }
+    .rectangle{
+        width: 760px;
+    }
+    .rectangle i{
+    font-size: 28px;
+    margin-top: 2px;
+    }
+    .rectangle p{
+        font-size: 18px;
+        margin-top: 6px;
+    }
+    .rectangle-s{
+    display: none;
+    }
+    .line hr{
+        width: 150px;
+    }
+    #container{
+        height: 437px;
+    }
+    #container img{
+        height: 437px;
+        width: 900px;
+    }
+    #slider{
+        height: 437px;
+        width: 900px;
+    }
+    #slider li{
+        height: 437px;
+        width: 900px;
+    }
+}
+@media (max-width: 760px) {
+    .wrapper {
+    width: 480px;
+    }
+    .container{
+        grid-template-columns: auto;
+    }
+    .line hr{
+        display: none;
+    }
+    .rectangle{
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-image: none;
+    color: white;
+    }
+    .rect1{
+    background-image: url("../image/Rectangle1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 90px;
+    }
+    .rect2{
+    background-image: url("../image/Rectangle2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 90px;
+    }
+    .rect3{
+    background-image: url("../image/Rectangle3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 90px;
+    }
+    .call{
+        display: none;
+    }
+    #container{
+        height: 300px;
+    }
+    #container img{
+        height: 300px;
+        width: 700px;
+    }
+    #slider{
+        height: 300px;
+        width: 700px;
+    }
+    #slider li{
+        height: 300px;
+        width: 700px;
+    }
+}
