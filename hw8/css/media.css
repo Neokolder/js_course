@@ -34,6 +34,7 @@
     }
     .container{
         grid-template-columns: auto auto;
+        justify-content: center;
     }
     .rectangle{
         width: 760px;
@@ -75,6 +76,7 @@
     }
     .container{
         grid-template-columns: auto;
+        justify-content: center;
     }
     .line hr{
         display: none;

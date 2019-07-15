@@ -15,7 +15,6 @@
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js" charset="utf-8"></script>
     <div class="wrapper">
         <div class="top">
             <a class="call" href="#">&#9742;&emsp; Call +001 555 801</a>
@@ -26,7 +25,7 @@
                 </li>
                 <li ><a href="#">&emsp;MY WHISHTLIST&emsp;  |</a>
                 </li>
-                <li ><a href="#">&emsp;LOGIN</a>
+                <li ><a id="logoId" href="#">&emsp;LOGIN</a>
                 </li>
             </ul>
         </div>
@@ -113,14 +112,14 @@
             <hr>
         </div>
         <div class="container">
-            <div><img src="img/41.jpg" width="300" height="345" alt=""/></div>
-            <div><img src="img/42.jpg" width="300" height="345" alt=""/></div>
-            <div><img src="img/43.jpg" width="300" height="345" alt=""/></div>
-            <div><img src="img/45.jpg" width="300" height="345" alt=""/></div>
-            <div><img src="img/44.jpg" width="300" height="345" alt=""/></div>
-            <div><img src="img/46.jpg" width="300" height="345" alt=""/></div>
-            <div><img src="img/47.jpg" width="300" height="345" alt=""/></div>
-            <div><img src="img/48.jpg" width="300" height="345" alt=""/></div>
+            <div id="imgHover1"><img src="img/41.jpg" width="300" height="345" alt=""/> <p class="whenHover" id="whenHover1">No at the store</p></div>
+            <div id="imgHover2"><img src="img/42.jpg" width="300" height="345" alt=""/> <p class="whenHover" id="whenHover2">No at the store</p></div>
+            <div id="imgHover3"><img src="img/43.jpg" width="300" height="345" alt=""/> <p class="whenHover" id="whenHover3">No at the store</p></div>
+            <div id="imgHover4"><img src="img/45.jpg" width="300" height="345" alt=""/> <p class="whenHover" id="whenHover4">No at the store</p></div>
+            <div id="imgHover5"><img src="img/44.jpg" width="300" height="345" alt=""/> <p class="whenHover" id="whenHover5">No at the store</p></div>
+            <div id="imgHover6"><img src="img/46.jpg" width="300" height="345" alt=""/> <p class="whenHover" id="whenHover6">No at the store</p></div>
+            <div id="imgHover7"><img src="img/47.jpg" width="300" height="345" alt=""/> <p class="whenHover" id="whenHover7">No at the store</p></div>
+            <div id="imgHover8"><img src="img/48.jpg" width="300" height="345" alt=""/> <p class="whenHover" id="whenHover8">No at the store</p></div>
         </div>
         <div class="footer">
             <div class="cols">
@@ -197,6 +196,12 @@
             </div>
             <span>Ahmm... No Spanish, i'm sorry :)</span>
         </div>
+        <div id="forImgHover">
+            <span>The store is empty</span>
+        </div>
+        <div id="divHover">
+            
+        </div>
     </div>
     <script>
         var index = 1;
@@ -240,18 +245,21 @@
 
         var toTop = document.getElementById('toTop');
 
-		window.onscroll = function(){
-			if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				toTop.style.display = "block";
-			} else {
-				toTop.style.display = "none";
-			}
-		}
+        $(document).on('scroll', function() {
+            var maxHeight = 10;
+            if ($(window).scrollTop() > maxHeight){
+                $('#toTop').show();
+            } else {
+                $('#toTop').hide();
+            }
+        })
 
-		toTop.addEventListener('click', function(){
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		});
+        $('#toTop').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, 700);
+        })
 
         //modal
         $('#logoId').on('click', function(){
@@ -259,8 +267,70 @@
         })
         $('#closeBtn').on('click', function(e) {
             $('#modal').hide();
-            $('body').removeClass('hovered');
             console.log(e);
+        })
+        var modal = document.getElementById('modal');
+        var btn = document.getElementById('logoId');
+        $(document).on('click', function(e) {
+            if(e.target != modal && e.target != btn){
+                $('#modal').hide(2000);
+            }
+        })
+        $('#imgHover1').hover(function(){
+            $('#forImgHover').show();
+            $('#whenHover1').show();
+        }, function(){
+            $('#forImgHover').hide();
+            $('#whenHover1').hide();
+        })
+        $('#imgHover2').hover(function(){
+            $('#forImgHover').show();
+            $('#whenHover2').show();
+        }, function(){
+            $('#forImgHover').hide();
+            $('#whenHover2').hide();
+        })
+        $('#imgHover3').hover(function(){
+            $('#forImgHover').show();
+            $('#whenHover3').show();
+        }, function(){
+            $('#forImgHover').hide();
+            $('#whenHover3').hide();
+        })
+        $('#imgHover4').hover(function(){
+            $('#forImgHover').show();
+            $('#whenHover4').show();
+        }, function(){
+            $('#forImgHover').hide();
+            $('#whenHover4').hide();
+        })
+        $('#imgHover5').hover(function(){
+            $('#forImgHover').show();
+            $('#whenHover5').show();
+        }, function(){
+            $('#forImgHover').hide();
+            $('#whenHover5').hide();
+        })
+        $('#imgHover6').hover(function(){
+            $('#forImgHover').show();
+            $('#whenHover6').show();
+        }, function(){
+            $('#forImgHover').hide();
+            $('#whenHover6').hide();
+        })
+        $('#imgHover7').hover(function(){
+            $('#forImgHover').show();
+            $('#whenHover7').show();
+        }, function(){
+            $('#forImgHover').hide();
+            $('#whenHover7').hide();
+        })
+        $('#imgHover8').hover(function(){
+            $('#forImgHover').show();
+            $('#whenHover8').show();
+        }, function(){
+            $('#forImgHover').hide();
+            $('#whenHover8').hide();
         })
     </script>
 </body>
